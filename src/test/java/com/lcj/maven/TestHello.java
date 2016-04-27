@@ -12,5 +12,11 @@ public class TestHello {
 		Hello h = new Hello();         
         assertEquals(h.sayHello("jizg"),"hello :jizg");
     }
+	
+	@Test
+    public void testHello2(){ 
+		Hello h = new Hello();         
+        assertEquals(h.sayHello("jizg"),"hello :jizgttt");
+    }
 
 }
