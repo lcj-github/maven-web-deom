@@ -6,4 +6,4 @@ PersonServiceTest  验证了 更新及不更新Person情况，（dao层未有的
 4:jetty包中的，jetty模拟服务端作为测试桩进行接口测试详细介绍 ，HttpServerDemo运行后，
 http://localhost:19993/test/ChannelFaqSearch及 http://localhost:19993/test/ExecuteCampaign 访问后，分别返回：json 及  xml 内容。
 参考：http://blog.csdn.net/russ44/article/details/52247455
-
+5：httptest 包 及 util包     http的 get 及  post请求。
