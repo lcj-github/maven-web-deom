@@ -93,7 +93,7 @@ public class TestMockito {
 	}
 	
 	
-	@Test   //除了匹配制定参数外，还可以匹配自己想要的任意参数
+	/*@Test   //除了匹配制定参数外，还可以匹配自己想要的任意参数
 	public void with_unspecified_arguments(){  
 	    List list = mock(List.class);  
 	    //匹配任意参数  
@@ -110,7 +110,7 @@ public class TestMockito {
 	    public boolean matches(Object o) {  
 	        return (int)o == 1 || (int)o == 2;  
 	    }  
-	}
+	}*/
 	
 	
 	@Test   //需要注意的是如果你使用了参数匹配，那么所有的参数都必须通过matchers来匹配
