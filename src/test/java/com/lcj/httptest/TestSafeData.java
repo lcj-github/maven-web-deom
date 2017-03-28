@@ -120,7 +120,7 @@ public class TestSafeData {
 	        String ret=jtest.sendRequest();
 	        String jsonContent = AES.decrypt("", "", ret);
 	        System.out.println(jsonContent);
-	        assertTrue("实际结果应该与预期相符合！", jsonContent.indexOf("Status") == 0);
+	        assertTrue("not same！", jsonContent.indexOf("Status") == 0);
 		}
 		
 		
