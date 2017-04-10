@@ -11,18 +11,19 @@ import java.util.logging.Logger;
 
 //启动了3个线程来访问Server
 public class MyClient3 {
-	
-private final static Logger logger = Logger.getLogger(MyClient3.class.getName());
-	
+
+	private final static Logger logger = Logger.getLogger(MyClient3.class.getName());
+			
+
 	public static void main(String[] args) throws Exception {
 		for (int i = 0; i < 3; i++) {
 			final int idx = i;
 			new Thread(new MyRunnable(idx)).start();
 		}
 	}
-	
+
 	private static final class MyRunnable implements Runnable {
-		
+
 		private final int idx;
 
 		private MyRunnable(int idx) {
@@ -33,13 +34,15 @@ private final static Logger logger = Logger.getLogger(MyClient3.class.getName())
 			SocketChannel socketChannel = null;
 			try {
 				socketChannel = SocketChannel.open();
-				SocketAddress socketAddress = new InetSocketAddress("localhost", 10000);
+				SocketAddress socketAddress = new InetSocketAddress(
+						"localhost", 10000);
 				socketChannel.connect(socketAddress);
 
-				MyRequestObject myRequestObject = new MyRequestObject("request_" + idx, "request_" + idx);
+				MyRequestObject myRequestObject = new MyRequestObject(
+						"request_" + idx, "request_" + idx);
 				logger.log(Level.INFO, myRequestObject.toString());
 				sendData(socketChannel, myRequestObject);
-				
+
 				MyResponseObject myResponseObject = receiveData(socketChannel);
 				logger.log(Level.INFO, myResponseObject.toString());
 			} catch (Exception ex) {
@@ -47,21 +50,24 @@ private final static Logger logger = Logger.getLogger(MyClient3.class.getName())
 			} finally {
 				try {
 					socketChannel.close();
-				} catch(Exception ex) {}
+				} catch (Exception ex) {
+				}
 			}
 		}
 
-		private void sendData(SocketChannel socketChannel, MyRequestObject myRequestObject) throws IOException {
+		private void sendData(SocketChannel socketChannel,
+				MyRequestObject myRequestObject) throws IOException {
 			byte[] bytes = SerializableUtil.toBytes(myRequestObject);
 			ByteBuffer buffer = ByteBuffer.wrap(bytes);
 			socketChannel.write(buffer);
 			socketChannel.socket().shutdownOutput();
 		}
 
-		private MyResponseObject receiveData(SocketChannel socketChannel) throws IOException {
+		private MyResponseObject receiveData(SocketChannel socketChannel)
+				throws IOException {
 			MyResponseObject myResponseObject = null;
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
-			
+
 			try {
 				ByteBuffer buffer = ByteBuffer.allocateDirect(1024);
 				byte[] bytes;
@@ -80,10 +86,10 @@ private final static Logger logger = Logger.getLogger(MyClient3.class.getName())
 			} finally {
 				try {
 					baos.close();
-				} catch(Exception ex) {}
+				} catch (Exception ex) {
+				}
 			}
 			return myResponseObject;
 		}
 	}
-
 }
