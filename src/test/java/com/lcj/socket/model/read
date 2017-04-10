@@ -1,0 +1,33 @@
+
+设计模式可供参考 。。。
+
+1：几个和业务相关的类 --> User，MyUserService和MyUserServiceImpl
+User就是我们通常的实体类; MyUserService是我们针对User实体类提供的业务逻辑接口; MyUserServiceImpl是业务逻辑实现类
+
+2:服务器端类 --> MyServer，MyServerSimpleImpl和MyServerNIOImpl
+MyServer是服务器端接口类，用来启动Socket server；
+MyServerSimpleImpl和MyServerNIOImpl是两个实现类，
+其中MyServerSimpleImpl是使用简单的Socket实现的，MyServerNIOImpl是使用java nio包里的类实现的，这个实现会有更好的性能。
+
+3:客户端类 --> MyClient，MyClientSimpleImpl和MyClientNIOImpl
+MyClient是客户端接口类，用来向Server端发送请求并获取相应；
+MyClientSimpleImpl和MyClientNIOImpl是两个实现类，
+其中MyClientSimpleImpl是使用简单Socket实现的，MyClientNIOImpl是使用java nio包里的类实现的，这个实现会有更好的性能。
+
+4:请求及响应接口--> MyRequest和MyResponse和MyResponseHandler
+MyRequest接口中定义了四个方法，分别用来获取远程业务逻辑实现类，方法名，参数类型列表和参数列表。
+MyResponse接口定义了一个方法用来从response类中获取结果。
+MyResponseHandler接口使用范型的方式来获取最终的结果对象。
+
+5:请求及响应实现--> MyGenericRequest，MyGenericResponse和MyGenericResponseHandler
+另外这里由于使用的反射类来在服务器端生成service实例，所以目前这里有个限制就是服务器端的Service实现类必须有默认构造函数。
+
+6:两个辅助类 --> SerializableUtil   IOUtil
+
+7:测试类--> Test 
+
+[com.lcj.socket.model.User@94153c4, com.lcj.socket.model.User@1fe26d9b]
+[com.lcj.socket.model.User@4268d15, com.lcj.socket.model.User@7ef85fd3]
+com.lcj.socket.model.User@2c31ac05
+com.lcj.socket.model.User@4bb17b4c
+null
