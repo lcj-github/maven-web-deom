@@ -1,0 +1,2 @@
+可多次执行MyClient.
+当每次执行MyClient时,MyServer会启动个线程去处理。
