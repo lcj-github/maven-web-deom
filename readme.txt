@@ -1,4 +1,4 @@
-1：TestHello TestSquare 与  jenkins自动化回归测试
+1：maven中TestHello TestSquare 与  jenkins自动化回归测试
 2：TestMockito  mock测试基本语法
 3：mockitodemo 实例  http://blog.csdn.net/zhoudaxia/article/details/33056093
 1) 在进行模拟测试时，要先设置模拟对象上方法的返回预期值，执行测试时会调用模拟对象上的方法，因此要验证这些方法是否被调用，并且传入的参数值是否符合预期。
@@ -7,3 +7,4 @@ PersonServiceTest  验证了 更新及不更新Person情况，（dao层未有的
 http://localhost:19993/test/ChannelFaqSearch及 http://localhost:19993/test/ExecuteCampaign 访问后，分别返回：json 及  xml 内容。
 参考：http://blog.csdn.net/russ44/article/details/52247455
 5：httptest 包 及 util包     http的 get 及  post请求。
+6：socket包： socket请求 及nio的方式
