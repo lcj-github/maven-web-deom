@@ -1,3 +1,7 @@
+0：参考
+http://blog.csdn.net/kongxx/article/details/7288896
+http://blog.csdn.net/zapldy/article/details/5850440
+
 一：发送 （客户端的处理）
 SocketChannel socketChannel = SocketChannel.open();
 SocketAddress socketAddress = new InetSocketAddress("localhost", 10000);
