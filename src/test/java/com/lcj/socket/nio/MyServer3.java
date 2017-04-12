@@ -113,17 +113,17 @@ private final static Logger logger = Logger.getLogger(MyServer3.class.getName())
 	//while{socketChannel-->buffer--->bytes-->ByteArrayOutputStream}-->bytes-->obj
 	private static MyRequestObject receiveData(SocketChannel socketChannel) throws IOException {
 		MyRequestObject myRequestObject = null;
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		ByteArrayOutputStream baos = new ByteArrayOutputStream(); //The buffer automatically grows as data is written to it.
 		ByteBuffer buffer = ByteBuffer.allocate(1024);
 		
 		try {
 			byte[] bytes;
 			int size = 0;
 			while ((size = socketChannel.read(buffer)) >= 0) {
-				buffer.flip();
+				buffer.flip(); //可以从buffer开头，对该buffer进行遍历（读取）了
 				bytes = new byte[size];
-				buffer.get(bytes);
-				baos.write(bytes);
+				buffer.get(bytes);//This method transfers bytes from this buffer into the given destination array
+				baos.write(bytes);//Writes bytes.length  bytes from the specified bytes array to this output stream.
 				buffer.clear();
 			}
 			bytes = baos.toByteArray();
