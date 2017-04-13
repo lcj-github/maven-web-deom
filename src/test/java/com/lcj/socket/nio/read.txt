@@ -10,6 +10,7 @@ byte[] bytes = SerializableUtil.toBytes(myRequestObject);//对象转为字节
 ByteBuffer buffer = ByteBuffer.wrap(bytes);
 socketChannel.write(buffer);
 socketChannel.socket().shutdownOutput();
+socketChannel.close();
 
 二 ：接受   （服务端的处理）
 // Selector for incoming time requests
