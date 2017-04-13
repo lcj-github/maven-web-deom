@@ -8,3 +8,5 @@ http://localhost:19993/test/ChannelFaqSearch及 http://localhost:19993/test/Exec
 参考：http://blog.csdn.net/russ44/article/details/52247455
 5：httptest 包 及 util包     http的 get 及  post请求。
 6：socket包： socket请求 及nio的方式
+7：fastjson ：json 格式数据处理实例
+8：nio：Selector Channel  非阻塞式交互实例
