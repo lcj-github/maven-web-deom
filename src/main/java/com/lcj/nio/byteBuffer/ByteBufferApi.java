@@ -3,6 +3,9 @@ package com.lcj.nio.byteBuffer;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.nio.CharBuffer;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -25,7 +28,9 @@ public class ByteBufferApi {
 
 		// showContent();
 		// showMethod();
-		   showLength();
+		// showLength();		
+		 byteBuffer2String(ByteBuffer.wrap("gb2312t".getBytes()),"gb2312");
+		
 	}
 
 	public static void showContent() {
@@ -164,5 +169,20 @@ public class ByteBufferApi {
 	}
 	
 	
+	public static String byteBuffer2String(ByteBuffer buffer, String charsetName) {
+		Charset charset = null;
+		CharsetDecoder decoder = null;
+		CharBuffer charBuffer = null;
+		try {
+			charset = Charset.forName(charsetName);// "gb2312"
+			decoder = charset.newDecoder();
+			charBuffer = decoder.decode(buffer);
 
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return null;
+		}		
+		System.out.println(charBuffer.toString());
+		return charBuffer.toString();
+	}
 }
