@@ -10,3 +10,4 @@ http://localhost:19993/test/ChannelFaqSearch及 http://localhost:19993/test/Exec
 6：socket包： socket请求 及nio的方式
 7：fastjson ：json 格式数据处理实例
 8：nio：Selector Channel  非阻塞式交互实例
+       byteBuffer 的应用（对传送数据的解析）
