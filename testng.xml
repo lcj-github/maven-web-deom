@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- 1:每一个独立的线程分别执行各自的测试方法  -->
+<!--  
+<suite name="Test-method Suite" parallel="methods" thread-count="2" >
+  <test name="Test-method test" group-by-instances="true">
+    <classes>
+      <class name="com.lcj.testng.ParallelMethodTest" />
+    </classes>
+  </test>
+</suite>
+-->
+
+<!-- 2:同一个测试组件（test execution）中的各个测试类将会在独立的线程中并行地执行。-->
+<!-- 
+<suite name="Test-class Suite" parallel="classes" thread-count="2" >
+  <test name="Test-class test" >
+    <classes>
+      <class name="com.lcj.testng.ParallelClassesTestOne" />
+      <class name="com.lcj.testng.ParallelClassesTestTwo" />
+    </classes>
+  </test>
+</suite>
+-->
+
+<!-- 3:如何并行地执行同一测试套件内的各个测试组件-->
+<!-- 
+<suite name="Test-class Suite" parallel="tests" thread-count="2">
+    <test name="Test-class test 1">
+        <parameter name="test-name" value="test-method One" />
+        <classes>
+            <class name="com.lcj.testng.ParallelSuiteTest" />
+        </classes>
+    </test>
+    <test name="Test-class test 2">
+        <parameter name="test-name" value="test-method Two" />
+        <classes>
+            <class name="com.lcj.testng.ParallelSuiteTest" />
+        </classes>
+    </test>
+</suite>
+-->
+
+<!-- 4:配置需要在多线程环境下运行的测试方法-->
+<suite name="Independent test Suite" >
+  <test name="Independent test">
+    <classes>
+     <class name="com.lcj.testng.IndependentTest" />
+    </classes>
+  </test>
+</suite>
+
+
+
+
+
+
+
+
+
+

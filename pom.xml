@@ -119,6 +119,14 @@
 		<artifactId>poi-ooxml</artifactId>
 		<version>3.9</version>
 	</dependency>
+	
+	<!-- testng start -->
+	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>6.9.4</version>
+		<scope>test</scope>
+	</dependency>
 
 
   </dependencies>
@@ -141,6 +149,11 @@
 					<includes>
 						<include>**/Test*.java</include>						
 					</includes>
+					<!--  
+					<suiteXmlFiles>
+        				<suiteXmlFile>testng.xml</suiteXmlFile>
+      				</suiteXmlFiles>
+      				-->
 				</configuration>				
 			</plugin>
 			 

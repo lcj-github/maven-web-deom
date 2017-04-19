@@ -12,3 +12,4 @@ http://localhost:19993/test/ChannelFaqSearch及 http://localhost:19993/test/Exec
 8：nio：Selector Channel  非阻塞式交互实例
        byteBuffer 的应用（对传送数据的解析）
 9：datamake：不同存储中数据处理
+10:com.lcj.testng及testng.xml及pom中，在testng.xml上run as 后，会生成 test-output文件夹
