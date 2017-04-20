@@ -13,3 +13,10 @@ http://localhost:19993/test/ChannelFaqSearch及 http://localhost:19993/test/Exec
        byteBuffer 的应用（对传送数据的解析）
 9：datamake：不同存储中数据处理
 10:com.lcj.testng及testng.xml及pom中，在testng.xml上run as 后，会生成 test-output文件夹
+http://howtodoinjava.com/java-testng-tutorials/
+ dependent：接口依赖其它接口
+ factory: login into a site and you want to run this test multiple times  (may be to test any memory leak issues).
+ dataprovider: login into a site with different sets of username and password each time.
+ factory 与 dataprovider的区别
+ Parallel* ：并行（多线程）地执行测试方法，测试类以及测试组件及 配置需要在多线程环境下运行的测试方法。
+ 11:mavenBuild TODO

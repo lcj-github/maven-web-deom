@@ -84,6 +84,7 @@
     	<version>5.1.25</version>
 	</dependency>
 	
+	  
 	<dependency>
 		<groupId>com.google.gson</groupId>
 		<artifactId>gson</artifactId>
@@ -120,7 +121,7 @@
 		<version>3.9</version>
 	</dependency>
 	
-	<!-- testng start -->
+	
 	<dependency>
 		<groupId>org.testng</groupId>
 		<artifactId>testng</artifactId>
@@ -131,38 +132,43 @@
 
   </dependencies>
   
+ 
   
   <build>
     <finalName>maven-web-demo</finalName>
-    <plugins>	
-      
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>				
-			</plugin>					
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>				 				
-				<configuration>
-					<includes>
-						<include>**/Test*.java</include>						
-					</includes>
-					<!--  
-					<suiteXmlFiles>
-        				<suiteXmlFile>testng.xml</suiteXmlFile>
-      				</suiteXmlFiles>
-      				-->
-				</configuration>				
-			</plugin>
+    <!-- Source directory configuration -->
+    <sourceDirectory>src/test/java/com/lcj/testng/mavenBuild</sourceDirectory>
+    <plugins>      
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.3.2</version>				
+		</plugin>					
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.19.1</version>				 				
+			<configuration>
+				<!--   for junit
+				<includes>
+					<include>**/Test*.java</include>						
+				</includes>
+				-->
+				<!-- Suite testng xml file to consider for test execution -->
+                   <suiteXmlFiles>
+                       <suiteXmlFile>testng.xml</suiteXmlFile>
+                       <suiteXmlFile>suites-test-testng.xml</suiteXmlFile>
+                   </suiteXmlFiles>					
+			</configuration>				
+		</plugin>
 			 
-		   <plugin>      
-		     <groupId>org.apache.maven.plugins</groupId>
-		     <artifactId>maven-surefire-report-plugin</artifactId>
-		     <version>2.12.2</version>			      		    
-		   </plugin>
-		</plugins>    
-  </build>
+	   <plugin>      
+	     <groupId>org.apache.maven.plugins</groupId>
+	     <artifactId>maven-surefire-report-plugin</artifactId>
+	     <version>2.12.2</version>			      		    
+	   </plugin>
+	</plugins>    
+  </build> 
+  
   
 </project>

@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- +++++++++++maven build  ++++++++++++ -->
+
+<suite name="Group of group Suite" verbose="1">
+  <test name="Group of group Test">
+    <groups>
+      <define name="include-group">
+        <include name="include-test-one" />
+        <include name="include-test-two" />
+      </define>
+      <define name="exclude-group">
+        <include name="test-one-exclude" />
+        <include name="test-two-exclude" />
+      </define>
+      <run>
+        <include name="include-group" />
+        <exclude name="exclude-group" />
+      </run>
+    </groups>
+    <classes>
+      <class name="com.lcj.testng.mavenBuild.RegularExpressionGroupTest" />
+    </classes>
+  </test>
+</suite>
+
+
+
+<!-- +++++++++++并行（多线程）地执行测试方法，测试类以及测试组件及 配置需要在多线程环境下运行的测试方法++++++++++++ --> 
+
 
 <!-- 1:每一个独立的线程分别执行各自的测试方法  -->
 <!--  
@@ -43,6 +71,7 @@
 -->
 
 <!-- 4:配置需要在多线程环境下运行的测试方法-->
+<!--
 <suite name="Independent test Suite" >
   <test name="Independent test">
     <classes>
@@ -50,7 +79,7 @@
     </classes>
   </test>
 </suite>
-
+-->
 
 
 
