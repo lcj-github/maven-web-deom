@@ -19,4 +19,5 @@ http://howtodoinjava.com/java-testng-tutorials/
  dataprovider: login into a site with different sets of username and password each time.
  factory 与 dataprovider的区别
  Parallel* ：并行（多线程）地执行测试方法，测试类以及测试组件及 配置需要在多线程环境下运行的测试方法。
- 11:mavenBuild TODO
+11:mavenBuild TODO
+12:HttpClientTest:http get  post  upload ssl（TODO) 实例
