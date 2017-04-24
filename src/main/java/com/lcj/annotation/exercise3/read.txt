@@ -1,0 +1,6 @@
+ExtendedAnnotationTableModel table =
+            new ExtendedAnnotationTableModel(BtcspHttpApiViewModel.class, new PaginationModel<BtcspHttpApiViewModel>(list,
+                request));
+                
+在页面中，使用 table中的属性。。 
+@TableColumnMarker(index = 1, name = "app应用名")  注解被 排序  及  显示用
