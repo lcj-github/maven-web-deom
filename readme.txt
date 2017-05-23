@@ -23,3 +23,4 @@ http://howtodoinjava.com/java-testng-tutorials/
 12:HttpClientTest:http get  post  upload ssl（TODO) 实例
 13:util-gat ： 反射  及  http请求参考
 14:log4testng.properties 进行配置 日志级别
+https://github.com/apache/falcon/tree/master/falcon-regression/merlin/src/test 可参考
