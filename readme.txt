@@ -22,3 +22,4 @@ http://howtodoinjava.com/java-testng-tutorials/
 11:mavenBuild TODO
 12:HttpClientTest:http get  post  upload ssl（TODO) 实例
 13:util-gat ： 反射  及  http请求参考
+14:log4testng.properties 进行配置 日志级别
