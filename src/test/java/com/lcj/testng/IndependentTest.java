@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 //添加log4testng.properties进行配置
+
 public class IndependentTest {
 	
 	private static Logger log = Logger.getLogger(IndependentTest.class);
