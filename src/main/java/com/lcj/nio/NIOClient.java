@@ -86,7 +86,16 @@ public class NIOClient {
 	 * @throws IOException 
 	 */
 	public void read(SelectionKey key) throws IOException{
-		//和服务端的read方法一样
+		// 客户端可读取消息:得到事件发生的Socket通道
+		SocketChannel channel = (SocketChannel) key.channel();
+		// 创建读取的缓冲区
+		ByteBuffer buffer = ByteBuffer.allocate(10);
+		channel.read(buffer);
+		byte[] data = buffer.array();
+		String msg = new String(data).trim();
+		System.out.println("客户端收到信息："+msg);
+		ByteBuffer outBuffer = ByteBuffer.wrap(msg.getBytes());
+		channel.write(outBuffer);// 将消息回送给服务端
 	}
 	
 	
