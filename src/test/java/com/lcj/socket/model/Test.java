@@ -7,8 +7,8 @@ public class Test {
 	private static int port = 10000;
 
 	public static void main(String[] args) throws Exception {
-		//test1();
-		test2();
+		test1();
+		//test2();
 	}
 
 	public static void test1() throws Exception {
@@ -25,16 +25,16 @@ public class Test {
 		response = myClient.execute(request);
 		System.out.println(response.getResult());
 		List<User> users = myClient.execute(request, new MyGenericResponseHandler<List<User>>());
-		System.out.println(users);
+		System.out.println(users.size());
 
 		request = new MyGenericRequest(MyUserServiceImpl.class, "findByName", new Class<?>[]{String.class}, new Object[]{"kongxx"});
 		response = myClient.execute(request);
 		System.out.println(response.getResult());
 		User user = myClient.execute(request, new MyGenericResponseHandler<User>());
-		System.out.println(user);
+		System.out.println(user.getName());
 
-		response = myClient.execute(new MyGenericRequest(MyUserServiceImpl.class, "test", new Class<?>[]{}, new Object[]{}));
-		System.out.println(response.getResult());
+		/*response = myClient.execute(new MyGenericRequest(MyUserServiceImpl.class, "test", new Class<?>[]{}, new Object[]{}));
+		System.out.println(response.getResult());*/
 	}
 
 	public static void test2() throws Exception {
