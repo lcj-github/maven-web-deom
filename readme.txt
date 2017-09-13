@@ -25,3 +25,4 @@ http://howtodoinjava.com/java-testng-tutorials/
 14:log4testng.properties 进行配置 日志级别
 https://github.com/apache/falcon/tree/master/falcon-regression/merlin/src/test 可参考
 15:realuse.softphone,realuse.das,realuse.sfdata
+16:泛型first
