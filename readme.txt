@@ -26,3 +26,4 @@ http://howtodoinjava.com/java-testng-tutorials/
 https://github.com/apache/falcon/tree/master/falcon-regression/merlin/src/test 可参考
 15:realuse.softphone,realuse.das,realuse.sfdata
 16:泛型first
+17:nio 理解  selector、key、channel  http://blog.csdn.net/column/details/ck-nio.html
