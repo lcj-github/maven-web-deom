@@ -29,3 +29,4 @@ https://github.com/apache/falcon/tree/master/falcon-regression/merlin/src/test �
 17:nio 理解  selector、key、channel  http://blog.csdn.net/column/details/ck-nio.html
 18:注解-- 自定义注解为实体打上标记，为自动生成 sql 提供依据，模拟 hibernate 的注解
 19:浅、深拷贝  http://blog.csdn.net/XIAXIA__/article/details/41652057
+20:callback:
