@@ -28,7 +28,7 @@ public class InterruptTest2 {
             System.out.println(thread.getName()+"得到了锁");
             long startTime = System.currentTimeMillis();
             for(    ;     ;) {
-                if(System.currentTimeMillis() - startTime >= 100)
+                if(System.currentTimeMillis() - startTime >= 10000)
                     break;
                 //插入数据
             }
