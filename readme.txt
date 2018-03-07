@@ -32,3 +32,4 @@ https://github.com/apache/falcon/tree/master/falcon-regression/merlin/src/test �
 20:callback: 客户端发送msg给服务端，服务端处理后（5秒），回调给客户端，告知处理成功。
 21:ThisTest  表示对当前对象的引用
 22:threadBase:并发编程基础  http://www.cnblogs.com/dolphin0520/category/602384.html
+23:designModel-Observer 观察者模式
