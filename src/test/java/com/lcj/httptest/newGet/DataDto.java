@@ -1,4 +1,4 @@
-package com.lcj.httptest.new1;
+package com.lcj.httptest.newGet;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

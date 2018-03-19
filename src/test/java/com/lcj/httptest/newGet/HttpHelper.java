@@ -1,4 +1,4 @@
-package com.lcj.httptest.new1;
+package com.lcj.httptest.newGet;
 
 import java.net.URI;
 import java.util.List;
